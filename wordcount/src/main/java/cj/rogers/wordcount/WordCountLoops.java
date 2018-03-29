@@ -20,7 +20,7 @@ public class WordCountLoops {
 	public Map<String, Integer> wordCount(String wordStringList) {
 		if(wordStringList == null || wordStringList.isEmpty())
 			return wordCountMap;
-		String[] wordArray = wordStringList.trim().split("\\s+");
+		String[] wordArray = wordStringList.trim().toLowerCase().split("\\s+");
 		List<String> wordList = Arrays.asList(wordArray);
 		for (Iterator<String> iterator = wordList.iterator(); iterator.hasNext();) {
 			String word = iterator.next();
